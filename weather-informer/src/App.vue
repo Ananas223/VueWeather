@@ -1,14 +1,14 @@
 <template>
-  <FirstComponent/>
+  <InformerContainer/>
 </template>
 
 <script>
-import FirstComponent from './components/Container.vue'
+import InformerContainer from './components/Container.vue'
 
 export default {
   name: 'App',
   components: {
-    FirstComponent
+    InformerContainer
   }
 }
 </script>

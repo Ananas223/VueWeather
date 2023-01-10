@@ -1,11 +1,27 @@
 <template>
-    <div class="informer-container"></div>
+    <div class="informer-container">
+        <InformerTemperature/>
+        <FlexBreak/>
+        <InformerHumidity/>
+        <VerticalDivider/>
+        <InformerWind/>
+    </div>
 </template>
 <script>
+import InformerTemperature from './Temperature.vue'
+import FlexBreak from './FlexBreak.vue'
+import InformerHumidity from './Humidity.vue'
+import VerticalDivider from './VerticalDivider.vue'
+import InformerWind from './Wind.vue'
+
 export default{
-  name: 'FirstComponent',
-  data(){
-    return {text: 'Я новый компонент!'}
+  name: 'InformerContainer',
+  components: {
+    InformerTemperature,
+    FlexBreak,
+    InformerHumidity,
+    InformerWind,
+    VerticalDivider
   }
 }
 </script>
