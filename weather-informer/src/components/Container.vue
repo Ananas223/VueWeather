@@ -1,10 +1,10 @@
 <template>
     <div class="informer-container">
-        <InformerTemperature/>
+        <InformerTemperature v-bind:real="weather.real" v-bind:feel="weather.feel"/>
         <FlexBreak/>
-        <InformerHumidity/>
+        <InformerHumidity v-bind:humidity="weather.humidity"/>
         <VerticalDivider/>
-        <InformerWind/>
+        <InformerWind v-bins:wind="weather.wind"/>
     </div>
 </template>
 <script>
@@ -16,6 +16,7 @@ import InformerWind from './Wind.vue'
 
 export default{
   name: 'InformerContainer',
+  props: ['weather'],
   components: {
     InformerTemperature,
     FlexBreak,
